@@ -6,25 +6,36 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import com.hyeonuk.myweb.command.TripVO;
+import com.hyeonuk.myweb.util.Criteria;
+
 
 @Service("tripService")
-public class TripServiceImpl implements TripService{
+public class TripServiceImpl implements TripService {
 
 	@Autowired
-private TripMapper tripMapper;
+	private TripMapper tripMapper;
 
 	@Override
 	public int noticeRegist(TripVO vo) {
-		
 		return tripMapper.noticeRegist(vo);
 	}
-	//tripMapper의 noticeRegist(vo) 리턴
+	
+
+//	@Override
+//	public ArrayList<TripVO> getList() {
+//		return tripMapper.getList();
+//	}
 
 	@Override
-	public ArrayList<TripVO> getList() {
-		return tripMapper.getList();
+	public ArrayList<TripVO> getList(Criteria cri) {
+		return tripMapper.getList(cri);
 	}
 
+	@Override
+	public int getTotal(Criteria cri) {
+		return tripMapper.getTotal(cri);
+	}
+	
 	@Override
 	public TripVO getContent(int tno) {
 		return tripMapper.getContent(tno);
@@ -38,8 +49,6 @@ private TripMapper tripMapper;
 	@Override
 	public int noticeDelete(int tno) {
 		return tripMapper.noticeDelete(tno);
-	
-		
 	}
 
 	@Override
@@ -50,5 +59,9 @@ private TripMapper tripMapper;
 	@Override
 	public ArrayList<TripVO> getPrevNext(int tno) {
 		return tripMapper.getPrevNext(tno);
-	}	
+	}
+
+
+	
 }
+

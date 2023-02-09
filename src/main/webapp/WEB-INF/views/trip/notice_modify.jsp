@@ -1,6 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
-    
+
+
     <!-- 데이트피커 -->
     <link rel="stylesheet" href="https://code.jquery.com/ui/1.13.2/themes/base/jquery-ui.css">
     <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"></script>
@@ -30,7 +31,7 @@
 		
 		<div class="bodytext_area box_inner">
 			<!-- appForm -->
-			<form action="modifyForm" method="post" class="appForm">
+			<form action="modifyForm?tno=3" method="post" class="appForm">
 				<fieldset>
 					<legend>상담문의 수정양식</legend>
 					<p class="info_pilsoo pilsoo_item">필수입력</p>
@@ -46,7 +47,8 @@
 						<li class="clear">
                             <label for="email_lbl" class="tit_lbl pilsoo_item">작성자 (수정 불가)</label>
                             <div class="app_content email_area">
-								<input type="hidden" name="tno" value="${vo.tno }" />
+                            	                            	
+								<input type="hidden" name="tno" value="${vo.tno }"/>
                                 <input type="text" name="writer" value="${vo.writer }" readonly="readonly"/>
 
                             </div>
@@ -77,4 +79,8 @@
 		</div>
 	</div>
 	<!-- //container -->
+	
+	
+	
+	
 	

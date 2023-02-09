@@ -43,10 +43,10 @@
 						</li>
 						
 						<li class="clear">
-                            <label for="email_lbl" class="tit_lbl pilsoo_item" required="required">작성자</label>
+                            <label for="email_lbl" class="tit_lbl pilsoo_item">작성자</label>
                             <div class="app_content email_area">
 								<input type="hidden" />
-                                <input type="text" placeholder="작성자" name="writer"/>
+                                <input type="text" placeholder="작성자" name="writer" required="required"/>
 
                             </div>
 						</li>
@@ -59,7 +59,7 @@
 						<li class="clear">
 							<label for="content_lbl" class="tit_lbl">문의내용</label>
 							<div class="app_content"><textarea id="content_lbl" class="w100p" name="content" placeholder="간단한 상담 요청 사항을 남겨주시면 보다 상세한 상담이 가능합니다.
-전화 상담 희망시 기재 부탁드립니다."></textarea></div>
+전화 상담 희망시 기재 부탁드립니다." required="required"></textarea></div>
 						</li>
 					</ul>
 					<p class="btn_line">
